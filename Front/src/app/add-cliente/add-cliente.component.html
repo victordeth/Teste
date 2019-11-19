@@ -1,0 +1,93 @@
+<div class="container">
+    <form [formGroup]="angFormCliente" novalidate (ngSubmit)="addCliente(nome.value, documento.value, cidade.value, endereco.value, complemento.value, idlocalizacao.value)">
+
+  <div class="row">
+    <div class="col-sm-12">
+      <BR>
+      <h3>Adicionar um novo Clientes!</h3>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row" style="height: 35px;">
+    <div class="col-sm-3" style="align-items: right;">
+      Nome:
+    </div>
+    <div class="col-sm-9">
+        <input type="text" placeholder="Nome do Cliente" formControlName="nome" #nome  style="width:100%;"/>
+    </div>
+  </div>
+
+  <div class="row" style="height: 35px;">
+      <div class="col-sm-3">
+        Documento:
+      </div>
+      <div class="col-sm-9">
+          <input type="text" placeholder="Documento do Cliente" formControlName="documento" #documento  style="width:100%;"/>
+      </div>
+    </div>
+
+    <div class="row" style="height: 35px;">
+        <div class="col-sm-3">
+          Cidade:
+        </div>
+        <div class="col-sm-9">
+            <input type="text" placeholder="Cidade do Cliente" formControlName="cidade" #cidade  style="width:100%;"/>
+        </div>
+      </div>
+
+      <div class="row" style="height: 35px;">
+          <div class="col-sm-3">
+            Endereço:
+          </div>
+          <div class="col-sm-9">
+              <input type="text" placeholder="Endereco do Cliente" formControlName="endereco" #endereco  style="width:100%;"/>
+          </div>
+        </div>
+
+        <div class="row" style="height: 35px;">
+            <div class="col-sm-3">
+                Complemento:
+            </div>
+            <div class="col-sm-9">
+                <input type="text" placeholder="Complemento do Endereço do Cliente" formControlName="complemento" #complemento  style="width:100%;"/>
+            </div>
+          </div>
+
+          <div class="row" style="height: 35px;">
+              <div class="col-sm-3">
+                  Localização:
+              </div>
+              <div class="col-sm-9">
+                  <select formControlName="idlocalizacao" #idlocalizacao style="width:100%;" placeholder="Selecione o pais do Cliente">
+                      <option value={{null}} disabled>Escolha um item</option>
+                    <option *ngFor="let option of listalocalizacao" value="{{option.idLocalizcao}}">
+                        {{option.pais}}
+                      </option>
+                    </select>
+              </div>
+            </div>
+
+            <div class="row" style="height: 35px;">
+                <div class="col-sm-3">
+                <p style="color:red;font-weight: bold;">{{ErroUsuario}}</p><BR>
+                <button type="submit" [disabled]="angFormCliente.pristine || angFormCliente.invalid" class="btn btn-primary">Gravar Cliente</button>
+              </div>
+
+              <div class="col-sm-3">
+                  <p style="color:red;font-weight: bold;"></p><BR>
+              <button (click)="CancelarAcao()" class="btn btn-primary">Cancelar</button>
+              </div>
+              
+          </div>  
+
+  </form>
+
+  <!-- <div class="row" *ngFor='let item of listalocalizacao'>
+
+      <div class="col-sm-3">
+       fdp-  {{item.idLocalizcao}} - {{item.capital}} - {{item.pais}} - {{item.continente}}
+      </div>
+
+      </div> -->
+</div>

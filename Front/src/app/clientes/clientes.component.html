@@ -1,0 +1,60 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-9">
+      <BR>
+      <h3>Clientes Cadastrados</h3>
+      <hr>
+    </div>
+    <div class="col-sm-3">
+      <BR><BR>
+      <a href ="/add-cliente"><font color="red"><b>+ Adicionar Cliente</b></font></a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <b>Nome</b>
+      <HR>
+    </div>
+    <div class="col-sm-2">
+      <b>Documento</b>
+      <HR>
+    </div>
+    <div class="col-sm-3">
+      <b>Cidade</b>
+      <HR>
+    </div>
+    <div class="col-sm-3">
+      <b>Opções</b>
+      <HR>
+    </div>
+  </div>
+
+
+  <div class="row" *ngFor='let item of ListaClientes'>
+
+    <div class="col-sm-3">
+      {{item.nome}}
+      <HR>
+    </div>
+
+    <div class="col-sm-2">
+      {{item.documento}}
+      <HR>
+    </div>
+
+    <div class="col-sm-3">
+      {{item.cidade}}
+      <HR>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/cliente/{{item.id}}"><b>Editar | Excluir</b></a>
+      <HR>
+    </div>
+
+  </div>
+
+
+</div>

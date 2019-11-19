@@ -1,0 +1,45 @@
+De Acordo com os arquivos anexos, criar uma api em .net core 2.1 , e utilizando o sqllite, criar uma base de dados.
+
+ 
+
+O massa de dados inicial está presente nos arquivos Clientes.json e Localizacao.json, será necessário uma carga inicial desses dados.
+
+Com isso, será necessário a criação de uma API com get e post e via uma aplicação front em Angular 6 ,mostrar os clientes , possibilitando a edição e inclusão de novos clientes.
+
+ 
+
+A estrutura do arquivo consiste em:
+
+·         Campo ID - Identificador do cliente que não deve ser visível na tela de apresentação
+
+·         Campo Nome - Identificador do nome do Cliente , obrigatório limitado a 50 posições,
+
+·         Campo Documento - Pode ser qualquer documento do cliente (rg, cpf, documento de estrangeiros) não pode ser nulo,
+
+·         Campo Cidade - Campo responsável por informar a cidade, caso prefira, pode ser criado um outro arquivo json para ter o domínio na tela, obrigatório
+
+·         Campo Endereço - Contém o endereço do cliente
+
+·         Campo Complemento-caso haja necessidade de complemento, preencher neste campo,
+
+·         Campo Pais- Combo que precisara ser alimentado com os dados do arquivo localizacao.json (alimentado com o campo Pais)
+
+ 
+
+Estrutura do arquivo Localização:
+
+·         Lista contendo 3 itens
+
+·         Pais
+
+·         Capital
+
+·         Continente
+
+ 
+
+Para utilização do sqlite temos os nugets abaixo:
+
+Microsoft.EntityFrameworkCore.Sqlite
+Microsoft.EntityFrameworkCore.Sqlite.Design
+Microsoft.EntityFrameworkCore.Tools

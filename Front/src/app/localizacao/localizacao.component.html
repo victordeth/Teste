@@ -1,0 +1,62 @@
+<div class="container">
+
+    <div class="row">
+      <div class="col-sm-9">
+        <BR>
+        <h3>Localizações Cadastradas</h3>
+        <hr>
+      </div>
+      
+    </div>
+  
+    <div class="row">
+        <div class="col-sm-1">
+            <b>Id</b>
+            <HR>
+          </div>
+      <div class="col-sm-3">
+        <b>Pais</b>
+        <HR>
+      </div>
+      <div class="col-sm-2">
+        <b>Capital</b>
+        <HR>
+      </div>
+      <div class="col-sm-3">
+        <b>Continente</b>
+        <HR>
+      </div>
+     
+    </div>
+  
+  
+    <div class="row" *ngFor='let item of ListaLocalizacao'>
+  
+        <div class="col-sm-1">
+            {{item.idLocalizcao}}
+            <HR>
+          </div>
+
+      <div class="col-sm-3">
+        {{item.pais}}
+        <hr>
+
+      </div>
+  
+      <div class="col-sm-2">
+        {{item.capital}}
+        <hr>
+
+      </div>
+  
+      <div class="col-sm-3">
+        {{item.continente}}
+        <hr>
+
+      </div>
+  
+     
+    </div>
+  
+  
+  </div>

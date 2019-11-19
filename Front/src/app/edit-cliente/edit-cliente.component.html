@@ -1,0 +1,97 @@
+<div class="container">
+  <form [formGroup]="angFormCliente" novalidate
+    (ngSubmit)="EditCliente(nome.value, documento.value, cidade.value, endereco.value, complemento.value, idlocalizacao.value)">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <BR>
+        <h3>Editar o Clientes!</h3>
+        <hr>
+      </div>
+    </div>
+
+    <div class="row" style="height: 35px;">
+      <div class="col-sm-3" style="align-items: right;">
+        Nome:
+      </div>
+      <div class="col-sm-9">
+        <input type="text" placeholder="Nome do Cliente" formControlName="nome" #nome style="width:100%;"
+          value="{{xxx?.nome}}" />
+      </div>
+    </div>
+
+    <div class="row" style="height: 35px;">
+      <div class="col-sm-3">
+        Documento:
+      </div>
+      <div class="col-sm-9">
+        <input type="text" placeholder="Documento do Cliente" formControlName="documento" #documento style="width:100%;"
+          value="{{xxx?.documento}}" />
+      </div>
+    </div>
+
+    <div class="row" style="height: 35px;">
+      <div class="col-sm-3">
+        Cidade:
+      </div>
+      <div class="col-sm-9">
+        <input type="text" placeholder="Cidade do Cliente" formControlName="cidade" #cidade style="width:100%;"
+          value="{{xxx?.cidade}}" />
+      </div>
+    </div>
+
+    <div class="row" style="height: 35px;">
+      <div class="col-sm-3">
+        Endereço:
+      </div>
+      <div class="col-sm-9">
+        <input type="text" placeholder="Endereco do Cliente" formControlName="endereco" #endereco style="width:100%;"
+          value="{{xxx?.endereco}}" />
+      </div>
+    </div>
+
+    <div class="row" style="height: 35px;">
+      <div class="col-sm-3">
+        Complemento:
+      </div>
+      <div class="col-sm-9">
+        <input type="text" placeholder="Complemento do Endereço do Cliente" formControlName="complemento" #complemento
+          style="width:100%;" value="{{xxx?.complemento}}" />
+      </div>
+    </div>
+
+    <div class="row" style="height: 35px;">
+      <div class="col-sm-3">
+        Localização:
+      </div>
+      <div class="col-sm-9">
+        <select #idlocalizacao style="width:100%;">
+          <option value={{null}} disabled>Escolha um item</option>
+          <option *ngFor="let option of listalocalizacao; let i = index;" value="{{option.idLocalizcao}}"
+            [selected]="option.idLocalizcao==xxx?.idLocalizacao">
+            {{option.pais}}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row" style="height: 35px;">
+      <div class="col-sm-3">
+        <p style="color:red;font-weight: bold;">{{ErroUsuario}}</p><BR>
+        <button type="submit" 
+          class="btn btn-primary">Gravar Cliente</button>
+      </div>
+      <div class="col-sm-3">
+          <p style="color:red;font-weight: bold;"></p><BR>
+      <button (click)="ExcluirCliente()" class="btn btn-primary">Excluir</button>
+      </div>
+      <div class="col-sm-3">
+          <p style="color:red;font-weight: bold;"></p><BR>
+      <button (click)="CancelarAcao()" class="btn btn-primary">Cancelar</button>
+      </div>
+    </div>
+
+  </form>
+
+
+</div>

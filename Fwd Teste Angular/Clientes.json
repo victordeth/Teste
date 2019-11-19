@@ -1,0 +1,27 @@
+{"Clientes":[
+ {
+  "ID":1,
+  "Nome": "Cliente 1",
+  "Documento": "323456782",
+  "Cidade": "Sao Paulo",
+  "Endereco": "Rua Boa Vista 123",
+  "Complemento": "",
+  "Pais": "Brasil"
+},{
+  "ID":2,
+  "Nome": "Cliente 2",
+  "Documento": "32332267898",
+  "Cidade": "Brasilia",
+  "Endereco": "Rua Frederico 432",
+  "Complemento": "Apto 32",
+  "Pais": "Brasil"
+},{
+  "ID":3,
+  "Nome": "Cliente 3"
+  "Documento": "89234123X",
+  "Cidade": "Nassau",
+  "Endereco": "Goodman’s Bay Corporate Centre",
+  "Complemento": "First Floor",
+  "Pais": "Bahamas"
+}]
+}
